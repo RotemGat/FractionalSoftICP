@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fractional-soft-icp"
+version = "0.1.0"
+description = "A differentiable partial point-cloud alignment loss based on fractional soft ICP."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+  { name = "Rotem Gatenyo" },
+]
+keywords = [
+  "3d",
+  "computer-vision",
+  "differentiable",
+  "icp",
+  "point-cloud",
+  "pytorch",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Topic :: Scientific/Engineering :: Image Processing",
+]
+dependencies = [
+  "torch>=1.12",
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest>=7",
+]
+
+[project.urls]
+Homepage = "https://github.com/RotemGat/FractionalSoftICP"
+Repository = "https://github.com/RotemGat/FractionalSoftICP"
+Issues = "https://github.com/RotemGat/FractionalSoftICP/issues"
+Paper = "https://openaccess.thecvf.com/content/CVPR2026/html/Gatenyo_Copy-Transform-Paste_Zero-Shot_Object-Object_Alignment_Guided_by_Vision-Language_and_Geometric_Constraints_CVPR_2026_paper.html"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
